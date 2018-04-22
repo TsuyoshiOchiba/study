@@ -226,11 +226,11 @@ $(function(){
 > `immediate`オプションと組み合わせて使用します。
 > `immediate`オプションが`true`の場合、`import()`メソッド内部で使用されこのチェックが`false`の場合スクリプトのロードのみを実行します。
 > `immediate`オプションが`false`の場合、このAPIを実行することで、コールバック関数の意図しない動作が防げる可能性があります。
-> チェック結果は返り値として`boolean`のみ返しますが、引数の`callback`関数に詳細なデータがjson形式で引き渡されるため、開発中のデバッグコードに使用できます。
+> チェック結果は返り値として`boolean`のみ返しますが、引数の`callback`関数に詳細なデータがオブジェクト形式で引き渡されるため、開発中のデバッグコードに使用できます。
 ##### callbackに渡される詳細なチェックデータ
 
-```JavaScript:data.json
-{
+```JavaScript:data.js
+var data = {
   checkResult : boolean,   // チェック総合結果 true / false
   keyDiff : {              // キー差分 オプションの'src'と'callback'のキーの比較 過不足あるキーを返します
     src : [],
