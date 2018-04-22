@@ -2,7 +2,7 @@
 ## Overview
 めでたくECMAScript6でブラウザのJavaScriptでもimportが使えるようになりましたが、ChromeやFireFoxならともかくIEは全滅です。
 ChromeやFireFoxでもブラウザのアップデートしてないと利用できないと思われるので、import的な事ができるライブラリを作ってみました。
-なお、__ECMAScript6のimport文をシミュレートするライブラリではなく__、jQueryを利用した__プラグイン__として、__ページ単位でスクリプトを読込み実行するタイプ__のライブラリです。
+なお、__ECMAScript6のimport文をシミュレートするライブラリではなく__、jQueryを利用した __プラグイン__ として、 __ページ単位でスクリプトを読込み実行するタイプ__ のライブラリです。
 ## Description
 ### ライブラリ概要
 外部JavaScriptファイルを読込み、読込んだJavaScriptファイルを利用した処理をコールバックとして実行するライブラリ。
@@ -229,7 +229,7 @@ $(function(){
 > チェック結果は返り値として`boolean`のみ返しますが、引数の`callback`関数に詳細なデータがjson形式で引き渡されるため、開発中のデバッグコードに使用できます。
 ##### callbackに渡される詳細なチェックデータ
 
-```json:data.json
+```JavaScript:data.json
 {
   checkResult : boolean,   // チェック総合結果 true / false
   keyDiff : {              // キー差分 オプションの'src'と'callback'のキーの比較 過不足あるキーを返します
